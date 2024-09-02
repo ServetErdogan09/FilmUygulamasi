@@ -29,7 +29,7 @@ class FilmlerRespository(var fDao : FilmlerDao) {
 
 
     var myJob : Job? = null
-    private val apiKey = "34eb622c11c5f0df4b0982f19030962c"
+    private val apiKey = "YOUR_KEY"
     private val dil = "tr-TR"
 
     fun populerFilimleriGetir(page: Int) {
