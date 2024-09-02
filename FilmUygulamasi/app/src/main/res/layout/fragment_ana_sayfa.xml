@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- Eğer veriler ekleyeceksen burada yer alacak -->
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/arkaPlan">
+
+        <!-- Toolbar -->
+        <Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/arkaPlan2"
+            android:layout_marginTop="20dp"
+            android:title="Film TV"
+            android:titleTextColor="@color/white"
+            android:titleMarginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Kategoriler için Yatay ScrollView -->
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="4dp">
+
+                <!-- Kategori başlıkları -->
+                <TextView
+                    android:id="@+id/textAksiyon"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#F44336"
+                    android:padding="12dp"
+                    android:text="Aksiyon"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textAnimasyon"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#5E03FA"
+                    android:padding="12dp"
+                    android:text="Animasyon"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textBilimKurgu"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#87F004"
+                    android:padding="12dp"
+                    android:text="Bilim-Kurgu"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textAile"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#009688"
+                    android:padding="12dp"
+                    android:text="Aile"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Diğer kategoriler -->
+                <TextView
+                    android:id="@+id/textMacera"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#C302E6"
+                    android:padding="12dp"
+                    android:text="Macera"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textKomedi"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#038DFB"
+                    android:padding="12dp"
+                    android:text="Komedi"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textSuc"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#0025F8"
+                    android:padding="12dp"
+                    android:text="Suç"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textBelgesel"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#33859E"
+                    android:padding="12dp"
+                    android:text="Belgesel"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textDram"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#00E4FF"
+                    android:padding="12dp"
+                    android:text="Dram"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/textFantastik"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#18B61E"
+                    android:padding="12dp"
+                    android:text="Fantastik"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textTarih"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#87F004"
+                    android:padding="12dp"
+                    android:text="Tarih"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textKorku"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#9C27B0"
+                    android:padding="12dp"
+                    android:text="Korku"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textGizem"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#FFC107"
+                    android:padding="12dp"
+                    android:text="Gizem"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textRomantik"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#EB3700"
+                    android:padding="12dp"
+                    android:text="Romantik"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/textSavas"
+                    android:layout_width="230dp"
+                    android:layout_height="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/text_duzen_shape"
+                    android:backgroundTint="#0097A7"
+                    android:padding="12dp"
+                    android:text="Savaş"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Aksiyon Filmleri Başlığı ve RecyclerView -->
+        <TextView
+            android:id="@+id/textAksiyonBaslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:text="Aksiyon Filmleri"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/AksiyonRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textAksiyonBaslik" />
+
+        <!-- Animasyon Filmleri Başlığı ve RecyclerView -->
+        <TextView
+            android:id="@+id/textKomediBaslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:text="Komedi Filmleri"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AksiyonRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/KomediRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textKomediBaslik" />
+
+        <!-- Bilim-Kurgu Filmleri Başlığı ve RecyclerView -->
+        <TextView
+            android:id="@+id/textBilimKurguBaslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="Bilim-Kurgu Filmleri"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/KomediRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/BilimKurguRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textBilimKurguBaslik" />
+
+        <!-- Aile Filmleri Başlığı ve RecyclerView -->
+        <TextView
+            android:id="@+id/textGerilimBaslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Korku Filmleri"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/BilimKurguRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/GerilimRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textGerilimBaslik" />
+
+
+
+        <TextView
+            android:id="@+id/textHaftaninTrendleri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Haftanin Trend Filmleri"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/GerilimRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/HaftaninTrendleriRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textHaftaninTrendleri" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/HaftaninTrendleriRecyclerView">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+            <!-- Diğer kategorilere ait RecyclerView'lar buraya eklenebilir -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

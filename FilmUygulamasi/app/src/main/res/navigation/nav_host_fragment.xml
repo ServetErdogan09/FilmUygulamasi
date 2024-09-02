@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.example.filmuygulamasi.ui.fragment.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_detayFragment"
+            app:destination="@id/detayFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_secilenKategoriFilmFragment"
+            app:destination="@id/secilenKategoriFilmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aramaFragment"
+        android:name="com.example.filmuygulamasi.ui.fragment.AramaFragment"
+        android:label="fragment_arama"
+        tools:layout="@layout/fragment_arama" >
+        <action
+            android:id="@+id/action_aramaFragment_to_detayFragment"
+            app:destination="@id/detayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/populerFragment"
+        android:name="com.example.filmuygulamasi.ui.fragment.PopulerFragment"
+        android:label="fragment_populer"
+        tools:layout="@layout/fragment_populer" >
+        <action
+            android:id="@+id/populertDetayGecis"
+            app:destination="@id/detayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.filmuygulamasi.ui.fragment.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument android:name="filmGecis" app:argType="com.example.filmuygulamasi.retrofit.model.Movie"/>
+        <argument android:name="gonderilenDeger" app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/secilenKategoriFilmFragment"
+        android:name="com.example.filmuygulamasi.ui.fragment.SecilenKategoriFilmFragment"
+        android:label="SecilenKategoriFilmFragment" >
+        <action
+            android:id="@+id/action_secilenKategoriFilmFragment_to_anaSayfaFragment2"
+            app:destination="@id/anaSayfaFragment" />
+        <action
+            android:id="@+id/action_secilenKategoriFilmFragment_to_detayFragment"
+            app:destination="@id/detayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmListesiFragmentFragment"
+        android:name="com.example.filmuygulamasi.ui.fragment.FilmListesiFragment"
+        android:label="fragment_film_listesi_fragment"
+        tools:layout="@layout/fragment_film_listesi_fragment" >
+        <action
+            android:id="@+id/action_filmListesiFragmentFragment_to_listeDetayFragment"
+            app:destination="@id/listeDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listeDetayFragment"
+        android:name="com.example.filmuygulamasi.ui.fragment.ListeDetayFragment"
+        android:label="ListeDetayFragment" >
+
+
+        <argument
+            android:name="filmList"
+            app:argType="com.example.filmuygulamasi.room.RoomModel" />
+    </fragment>
+</navigation>

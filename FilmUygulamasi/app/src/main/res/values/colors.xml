@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="arkaPlan">#0E2F47</color>
+    <color name="arkaPlan2">#263D5A</color>
+    <color name="bottomicon">#6F7376</color>
+    <color name="toolbarRenk">#BF9C34</color>
+    <color name="layoutDe">#272E33</color>
+    <color name="sari">#F6E008</color>
+</resources>
